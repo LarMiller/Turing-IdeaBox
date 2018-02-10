@@ -1,10 +1,48 @@
+header {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  margin: .75rem 0;
+}
+
 body {
   background-color: #E5F3F2;
+  font-family: 'Open Sans', serif;
+  font-weight: 400;
+  text-align: center; 
+}
+
+.header-idea {
+  color: #00A79D;
+  text-align: center;
+  display: inline;
+} 
+
+.header-box {
+  color: #6D6E71;
+  display: inline;
+}
+
+.idea-title {
+  height: 1.7rem;
+  width: 17rem;
+  border: .1rem solid lightgrey;
+  font-size: 1.2rem;
+  padding: .1rem .4rem;
+  margin-bottom: 1rem;
+}
+
+.idea-description{
+  width: 17rem;
+  height: 5.75rem;
+  border: .1rem solid lightgrey;
+  padding: .1rem .4rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 section {
-  background-color: white;
-  
+  background-color: white; 
 }
 
 .save {
@@ -18,29 +56,12 @@ section {
   margin: 14px auto;
 }
 
-.idea-title {
-  width: 100%;
-  padding: 15px;
-  display:block;
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 19px;
-  color:black; 
-}
-  .idea-description{
-  width: 100%;
-  padding: 15px;
-  display:block;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 19px;
-  box-sizing: border-box;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
 .main-title {
   font-color: #00A79D;
+}
 
+.save-button {
+  : center;
 }
 
 
