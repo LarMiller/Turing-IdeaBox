@@ -2,7 +2,11 @@ header {
   text-align: center;
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
-  margin: .75rem 0;
+  padding-top: 32px;     
+  width: 100%;
+  height: 4.5rem;
+
+  /*margin top works in dev tools with 32px*/
 }
 
 body {
@@ -12,20 +16,27 @@ body {
   text-align: center; 
 }
 
+form {
+  height: 50%;
+  width: 100%;
+}
+
 .header-idea {
   color: #00A79D;
   text-align: center;
   display: inline;
+  font-size: 2rem;
 } 
 
 .header-box {
   color: #6D6E71;
   display: inline;
+  font-size: 2rem;
 }
 
 .idea-title {
   height: 1.7rem;
-  width: 17rem;
+  width: 82%;
   border: .1rem solid lightgrey;
   font-size: 1.2rem;
   padding: .1rem .4rem;
@@ -33,7 +44,7 @@ body {
 }
 
 .idea-description{
-  width: 17rem;
+  width: 82%;
   height: 5.75rem;
   border: .1rem solid lightgrey;
   padding: .1rem .4rem;
@@ -42,31 +53,34 @@ body {
 }
 
 section {
-  background-color: white; 
-}
-
-.save {
+  background-color: white;
   width: 100%;
-  padding: 10px;
-  color:#ffffff;
-  background-color: #00A79D;
-  font-size: 16px;
-  font-weight: 800;
-  cursor: pointer;
-  margin: 14px auto;
+  height: 100vh; 
 }
 
 .main-title {
   font-color: #00A79D;
 }
 
-.save-button {
-  : center;
+#save-button {
+  margin-bottom: 1rem;
+  width: 87%;
+  height: 2rem; 
+  background-color: #00A79D;
+  font-size: 16px;
+  color: white;
 }
 
-
-
-
+.search-field{
+  margin-top: 1rem;
+  text-align: left;
+  width: 82%;
+  height: 2rem;
+  border: .1rem solid lightgrey;
+  font-size: large;
+  color: lightgrey;
+  padding-left: .5rem;
+}
 
 
 
