@@ -1,0 +1,65 @@
+body {
+  background-color: #E5F3F2;
+}
+
+section {
+  background-color: white;
+  
+}
+
+.save {
+  width: 100%;
+  padding: 10px;
+  color:#ffffff;
+  background-color: #00A79D;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  margin: 14px auto;
+}
+
+.idea-title {
+  width: 100%;
+  padding: 15px;
+  display:block;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  color:black; 
+}
+  .idea-description{
+  width: 100%;
+  padding: 15px;
+  display:block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 19px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.main-title {
+  font-color: #00A79D;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
