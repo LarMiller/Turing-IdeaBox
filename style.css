@@ -2,11 +2,13 @@ header {
   text-align: center;
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
-  padding-top: 32px;     
   width: 100%;
   height: 4.5rem;
+}
 
-  /*margin top works in dev tools with 32px*/
+h1 {
+  position: relative;
+  margin-top: 12rem;
 }
 
 body {
@@ -52,16 +54,6 @@ form {
   margin-bottom: 1rem;
 }
 
-section {
-  background-color: white;
-  width: 100%;
-  height: 100vh; 
-}
-
-.main-title {
-  font-color: #00A79D;
-}
-
 #save-button {
   margin-bottom: 1rem;
   width: 87%;
@@ -73,9 +65,90 @@ section {
 
 #save-button:hover {
   background-color: #045E55;
+}
+
+section {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100vh; 
+}
+
+/*--------------------------------*/
+
+article {
+  position: relative;
+  background-color: #ffffff;
+  width: 80%;
+  height: 40%;
+  border: 10px solid blue;
+}
+
+h2 {
+  display: inline-block;
+  text-align: left;
+  width: 70%;
+  color: #6D6E71;
+}
+
+p {
+  justify-content: left;
+  text-align: center;
+  padding-left: 1rem 0 0 2rem;
+  width: 70%;
+  color: #939598;
+}
+
+.deleteImg {
+  object-position: top;
+  text-align: right;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.deleteImg:hover {
+  width: 1rem;
+  height: 1rem;
+}
+
+.upvoteImg {
+  display: inline-block;
+  object-position: bottom;
+  text-align: left;
+  width: 1rem;
+  height: 1rem;
+}
+
+.upvoteImg:hover {
+  width: 1rem;
+  height: 1rem;
+}
+
+.downvoteImg {
+  display: inline-block;
+  object-position: bottom;
+  text-align: left;  
+  width: 1rem;
+  height: 1rem;
+
+}
+
+.downvoteImg:hover {
+  width: 1rem;
+  height: 1rem;
+}
+
+.selector {
+  color: #d1d3d4;
+}
+
+/*-----------------------------------*/
 
 
-
+.form-field {
+  height: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .search-field{
