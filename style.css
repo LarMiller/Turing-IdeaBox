@@ -1,3 +1,7 @@
+* {
+  justify-content: center;
+}
+
 header {
   text-align: center;
   font-family: 'Roboto Slab', serif;
@@ -18,25 +22,25 @@ body {
   text-align: center; 
 }
 
-form {
+.first-forms {
   height: 50%;
   width: 100%;
 }
 
-.header-idea {
+.headerIdea {
   color: #00A79D;
   text-align: center;
   display: inline;
   font-size: 2rem;
 } 
 
-.header-box {
+.headerBox {
   color: #6D6E71;
   display: inline;
   font-size: 2rem;
 }
 
-.idea-title {
+.ideaTitle {
   height: 1.7rem;
   width: 82%;
   border: .1rem solid lightgrey;
@@ -45,7 +49,7 @@ form {
   margin-bottom: 1rem;
 }
 
-.idea-description{
+.ideaDescription{
   width: 82%;
   height: 5.75rem;
   border: .1rem solid lightgrey;
@@ -54,7 +58,7 @@ form {
   margin-bottom: 1rem;
 }
 
-#save-button {
+#saveButton {
   margin-bottom: 1rem;
   width: 87%;
   height: 2rem; 
@@ -63,7 +67,7 @@ form {
   color: white;
 }
 
-#save-button:hover {
+#saveButton:hover {
   background-color: #045E55;
 }
 
@@ -71,6 +75,23 @@ section {
   background-color: #ffffff;
   width: 100%;
   height: 100vh; 
+}
+
+.formField {
+  height: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.searchField{
+  margin-top: 1rem;
+  text-align: left;
+  width: 82%;
+  height: 2rem;
+  border: .1rem solid lightgrey;
+  font-size: large;
+  color: lightgrey;
+  padding-left: .5rem;
 }
 
 /*--------------------------------*/
@@ -140,26 +161,6 @@ p {
 
 .selector {
   color: #d1d3d4;
-}
-
-/*-----------------------------------*/
-
-
-.form-field {
-  height: 3rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.search-field{
-  margin-top: 1rem;
-  text-align: left;
-  width: 82%;
-  height: 2rem;
-  border: .1rem solid lightgrey;
-  font-size: large;
-  color: lightgrey;
-  padding-left: .5rem;
 }
 
 
