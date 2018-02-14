@@ -1,12 +1,18 @@
+* {
+  justify-content: center;
+}
+
 header {
   text-align: center;
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
-  padding-top: 32px;     
   width: 100%;
   height: 4.5rem;
+}
 
-  /*margin top works in dev tools with 32px*/
+h1 {
+  position: relative;
+  margin-top: 12rem;
 }
 
 body {
@@ -16,25 +22,25 @@ body {
   text-align: center; 
 }
 
-form {
+.first-forms {
   height: 50%;
   width: 100%;
 }
 
-.header-idea {
+.headerIdea {
   color: #00A79D;
   text-align: center;
   display: inline;
   font-size: 2rem;
 } 
 
-.header-box {
+.headerBox {
   color: #6D6E71;
   display: inline;
   font-size: 2rem;
 }
 
-.idea-title {
+.ideaTitle {
   height: 1.7rem;
   width: 82%;
   border: .1rem solid lightgrey;
@@ -43,7 +49,7 @@ form {
   margin-bottom: 1rem;
 }
 
-.idea-description{
+.ideaDescription{
   width: 82%;
   height: 5.75rem;
   border: .1rem solid lightgrey;
@@ -52,17 +58,7 @@ form {
   margin-bottom: 1rem;
 }
 
-section {
-  background-color: white;
-  width: 100%;
-  height: 100vh; 
-}
-
-.main-title {
-  font-color: #00A79D;
-}
-
-#save-button {
+#saveButton {
   margin-bottom: 1rem;
   width: 87%;
   height: 2rem; 
@@ -71,14 +67,23 @@ section {
   color: white;
 }
 
-#save-button:hover {
+#saveButton:hover {
   background-color: #045E55;
-
-
-
 }
 
-.search-field{
+section {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100vh; 
+}
+
+.formField {
+  height: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.searchField{
   margin-top: 1rem;
   text-align: left;
   width: 82%;
@@ -87,6 +92,75 @@ section {
   font-size: large;
   color: lightgrey;
   padding-left: .5rem;
+}
+
+/*--------------------------------*/
+
+article {
+  position: relative;
+  background-color: #ffffff;
+  width: 80%;
+  height: 40%;
+  border: 10px solid blue;
+}
+
+h2 {
+  display: inline-block;
+  text-align: left;
+  width: 70%;
+  color: #6D6E71;
+}
+
+p {
+  justify-content: left;
+  text-align: center;
+  padding-left: 1rem 0 0 2rem;
+  width: 70%;
+  color: #939598;
+}
+
+.deleteImg {
+  object-position: top;
+  text-align: right;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.deleteImg:hover {
+  width: 1rem;
+  height: 1rem;
+}
+
+.upvoteImg {
+  display: inline-block;
+  object-position: bottom;
+  text-align: left;
+  width: 1rem;
+  height: 1rem;
+}
+
+.upvoteImg:hover {
+  width: 1rem;
+  height: 1rem;
+}
+
+.downvoteImg {
+  display: inline-block;
+  object-position: bottom;
+  text-align: left;  
+  width: 1rem;
+  height: 1rem;
+
+}
+
+.downvoteImg:hover {
+  width: 1rem;
+  height: 1rem;
+}
+
+.selector {
+  color: #d1d3d4;
 }
 
 
