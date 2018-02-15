@@ -2,7 +2,6 @@ var userInputIdeaTitle = document.querySelector('.ideaTitle');
 var userInputIdeaDescription = document.querySelector('.ideaDescription');
 var userSaveBtn = document.querySelector('#saveButton');
 var userSearchField = document.querySelector('.searchField');
-var userIdeaCard = document.querySelector('article');
 var deleteCardBtn = document.querySelector('.deleteBtn');
 var upVoteCardBtn = document.querySelector('.upVoteBtn')
 var downVoteCardBtn = document.querySelector('.downVoteBtn')
@@ -10,12 +9,14 @@ var dropDownSelector = document.querySelector('.qualitySelector')
 var ideaCardDeck = document.querySelector('#listedIdeas')
 
 
-userSaveBtn.addEventListener('click', userSubmit()); 
+userSaveBtn.addEventListener('click', userSubmit); 
         function userSubmit() {
   if (userInputIdeaTitle.value.length > 0 && userInputIdeaDescription.value.length > 0) {
     var userIdeaCard = document.createElement('article');
+    var randomWholeNum =Math.floor((Math.random() * 10) + 1);
     userIdeaCard.innerHTML =       
       `<h2>${userInputIdeaTitle.value}</h2>
+      <h3>${randomWholeNum}</h3>
         <form class="secondForms">
         <button class="deleteBtn">
         <img class="deleteImg" src="delete.svg">
@@ -37,12 +38,17 @@ userSaveBtn.addEventListener('click', userSubmit());
             <option value="genius">genius
             </option>
           </select>
-        </form>`
+        </form>`;
 
     ideaCardDeck.appendChild(userIdeaCard);
     // userSaveBtn.disabled = true;
-    // // clearInputFields();
+    clearInputFields();
     // countLinks();
     }
+}
+
+function clearInputFields(){
+  userInputIdeaTitle.value = "";
+  userInputIdeaDescription.value = "";
 }
 
