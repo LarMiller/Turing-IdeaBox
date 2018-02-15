@@ -9,15 +9,17 @@ var dropDownSelector = document.querySelector('.qualitySelector')
 var ideaCardDeck = document.querySelector('#listedIdeas')
 
 
-userSaveBtn.addEventListener('click', userSubmit); 
-        function userSubmit() {
+userSaveBtn.addEventListener('click', userSubmit);
+ideaCardDeck.addEventListener('click', deleteIdeaCard);
+
+
+
+function userSubmit() {
   if (userInputIdeaTitle.value.length > 0 && userInputIdeaDescription.value.length > 0) {
     var userIdeaCard = document.createElement('article');
-    var randomWholeNum =Math.floor((Math.random() * 10) + 1);
+    var randomWholeNum =Math.floor((Math.random() * 1000) + 1);
     userIdeaCard.innerHTML =       
-      `<h2>${userInputIdeaTitle.value}</h2>
-      <h3>${randomWholeNum}</h3>
-        <form class="secondForms">
+      `<h2>${userInputIdeaTitle.value} ${randomWholeNum}</h2>
         <button class="deleteBtn">
         <img class="deleteImg" src="delete.svg">
       </button>
@@ -37,10 +39,9 @@ userSaveBtn.addEventListener('click', userSubmit);
             </option>
             <option value="genius">genius
             </option>
-          </select>
-        </form>`;
+          </select>`;
 
-    ideaCardDeck.appendChild(userIdeaCard);
+    ideaCardDeck.prepend(userIdeaCard);
     // userSaveBtn.disabled = true;
     clearInputFields();
     // countLinks();
@@ -52,3 +53,10 @@ function clearInputFields(){
   userInputIdeaDescription.value = "";
 }
 
+function deleteIdeaCard(event) {
+  debugger;
+  if(event.target.id === 'deleteBtn') {
+    console.log('heeeeyyy');
+    event.target.parentNode.parentNode.remove();
+  }
+}
