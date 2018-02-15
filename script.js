@@ -54,9 +54,11 @@ function clearInputFields(){
 }
 
 function deleteIdeaCard(event) {
-  debugger;
-  if(event.target.id === 'deleteBtn') {
+  // debugger;
+  var foo = document.querySelector('article').children[1];
+  if(event.target === foo) {
     console.log('heeeeyyy');
-    event.target.parentNode.parentNode.remove();
+    foo.parentNode.remove();
+    // event.target.parentNode.parentNode.remove();
   }
 }
