@@ -2,21 +2,22 @@ var userInputIdeaTitle = document.querySelector('.ideaTitle');
 var userInputIdeaDescription = document.querySelector('.ideaDescription');
 var userSaveBtn = document.querySelector('#saveButton');
 var userSearchField = document.querySelector('.searchField');
-var userIdeaCard = document.querySelector('article');
 var deleteCardBtn = document.querySelector('.deleteBtn');
-var upVoteCardBtn = document.querySelector('.upVoteBtn')
-var downVoteCardBtn = document.querySelector('.downVoteBtn')
-var dropDownSelector = document.querySelector('.qualitySelector')
-var ideaCardDeck = document.querySelector('#listedIdeas')
+var upVoteCardBtn = document.querySelector('.upVoteBtn');
+var downVoteCardBtn = document.querySelector('.downVoteBtn');
+var dropDownSelector = document.querySelector('.qualitySelector');
+var ideaCardDeck = document.querySelector('#listedIdeas');
 
+userSaveBtn.addEventListener('click', userSubmit);
+ideaCardDeck.addEventListener('click', deleteIdeaCard);
+// userSaveBtn.addEventListener('click', getTime);
 
-userSaveBtn.addEventListener('click', userSubmit()); 
-        function userSubmit() {
+function userSubmit() {
   if (userInputIdeaTitle.value.length > 0 && userInputIdeaDescription.value.length > 0) {
     var userIdeaCard = document.createElement('article');
-    userIdeaCard.innerHTML =       
-      `<h2>${userInputIdeaTitle.value}</h2>
-        <form class="secondForms">
+    var uniqueId = Math.round(new Date().getTime(userSaveBtn)/1000);
+    }
+    userIdeaCard.innerHTML = `<h2 id="${uniqueId}">${userInputIdeaTitle.value}</h2>
         <button class="deleteBtn">
         <img class="deleteImg" src="delete.svg">
       </button>
@@ -36,13 +37,26 @@ userSaveBtn.addEventListener('click', userSubmit());
             </option>
             <option value="genius">genius
             </option>
-          </select>
-        </form>`
+          </select>`;
 
-    ideaCardDeck.appendChild(userIdeaCard);
-    // userSaveBtn.disabled = true;
-    // // clearInputFields();
+    ideaCardDeck.prepend(userIdeaCard);
+    clearInputFields();
     // countLinks();
     }
+
+
+
+function clearInputFields(){
+  userInputIdeaTitle.value = "";
+  userInputIdeaDescription.value = "";
 }
 
+function deleteIdeaCard(event) {
+  // debugger;
+  var foo = document.querySelector('article').children[1];
+  if(event.target === foo) {
+    console.log('heeeeyyy');
+    foo.parentNode.remove();
+    // event.target.parentNode.parentNode.remove();
+  }
+}
