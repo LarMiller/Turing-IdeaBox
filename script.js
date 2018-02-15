@@ -3,23 +3,21 @@ var userInputIdeaDescription = document.querySelector('.ideaDescription');
 var userSaveBtn = document.querySelector('#saveButton');
 var userSearchField = document.querySelector('.searchField');
 var deleteCardBtn = document.querySelector('.deleteBtn');
-var upVoteCardBtn = document.querySelector('.upVoteBtn')
-var downVoteCardBtn = document.querySelector('.downVoteBtn')
-var dropDownSelector = document.querySelector('.qualitySelector')
-var ideaCardDeck = document.querySelector('#listedIdeas')
-
+var upVoteCardBtn = document.querySelector('.upVoteBtn');
+var downVoteCardBtn = document.querySelector('.downVoteBtn');
+var dropDownSelector = document.querySelector('.qualitySelector');
+var ideaCardDeck = document.querySelector('#listedIdeas');
 
 userSaveBtn.addEventListener('click', userSubmit);
 ideaCardDeck.addEventListener('click', deleteIdeaCard);
-
-
+// userSaveBtn.addEventListener('click', getTime);
 
 function userSubmit() {
   if (userInputIdeaTitle.value.length > 0 && userInputIdeaDescription.value.length > 0) {
     var userIdeaCard = document.createElement('article');
-    var randomWholeNum =Math.floor((Math.random() * 1000) + 1);
-    userIdeaCard.innerHTML =       
-      `<h2>${userInputIdeaTitle.value} ${randomWholeNum}</h2>
+    var uniqueId = Math.round(new Date().getTime(userSaveBtn)/1000);
+    }
+    userIdeaCard.innerHTML = `<h2 id="${uniqueId}">${userInputIdeaTitle.value}</h2>
         <button class="deleteBtn">
         <img class="deleteImg" src="delete.svg">
       </button>
@@ -42,11 +40,11 @@ function userSubmit() {
           </select>`;
 
     ideaCardDeck.prepend(userIdeaCard);
-    // userSaveBtn.disabled = true;
     clearInputFields();
     // countLinks();
     }
-}
+
+
 
 function clearInputFields(){
   userInputIdeaTitle.value = "";
